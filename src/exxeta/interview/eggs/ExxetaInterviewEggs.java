@@ -11,11 +11,9 @@ public class ExxetaInterviewEggs implements ISkycrapper {
 
     int vajce = 2;
     int realCountOfFloor = 1000;
-    
+
     int maxFloor;
-    
-    
-    
+
     public ExxetaInterviewEggs(int maxFloor) {
         this.maxFloor = maxFloor;
     }
@@ -29,13 +27,11 @@ public class ExxetaInterviewEggs implements ISkycrapper {
      */
     public static void main(String[] args) {
     //     ExxetaInterviewEggs t = new ExxetaInterviewEggs(99);
-    //     int res = t.fall_new();
-    //     System.out.println("Poschodie: "+ res);
-        
-         test_1();
-        
-        
-        
+        //     int res = t.fall_new();
+        //     System.out.println("Poschodie: "+ res);
+
+        test_1();
+
     }
 
     public static void test_1() {
@@ -144,7 +140,8 @@ public class ExxetaInterviewEggs implements ISkycrapper {
         int x, y = 25;
         boolean tmp = true;
 
-          for (x = 50; x < getFloorCount(); x++) {
+        int middle = getFloorCount() / 2;
+        for (x = middle; x < getFloorCount(); x++) {
             if (testFloor(x)) {
                 if (vajce == 2) {
                     tmp = testFloor(x + y);
@@ -156,18 +153,18 @@ public class ExxetaInterviewEggs implements ISkycrapper {
                     res = x;
                     break;
                 }
-                
+
                 if (!tmp) {
                     vajce--;
                     if (vajce == 0) {
-                       res = x;
-                       break;
+                        res = x;
+                        break;
                     }
-                    
+
                     x = 1;
-                    
+
                 }
-                
+
             } else {
                 vajce--;
                 if (vajce == 1) {
@@ -175,7 +172,7 @@ public class ExxetaInterviewEggs implements ISkycrapper {
                 } else {
                     res = x;
                     break;
-                }   
+                }
             }
         }
         return res;
