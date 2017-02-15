@@ -10,7 +10,7 @@ import java.util.Set;
 public class ExxetaInterviewEggs implements ISkycrapper {
 
     int vajce = 2;
-    int realCountOfFloor = 1000;
+    int realCountOfFloor = 100;
 
     int maxFloor;
 
@@ -26,17 +26,17 @@ public class ExxetaInterviewEggs implements ISkycrapper {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-    //     ExxetaInterviewEggs t = new ExxetaInterviewEggs(99);
-        //     int res = t.fall_new();
-        //     System.out.println("Poschodie: "+ res);
+         //   ExxetaInterviewEggs t = new ExxetaInterviewEggs(50);
+         //    int res = t.fall_new();
+         //    System.out.println("Poschodie: "+ res);
 
-        test_1();
+         test_1();
 
     }
 
     public static void test_1() {
         int correct = 0, incorrect = 0;
-        for (int idx = 2; idx < 1000; idx++) {
+        for (int idx = 2; idx < 100; idx++) {
             // set maximum floor
             ExxetaInterviewEggs ex = new ExxetaInterviewEggs(idx);
 
@@ -161,7 +161,7 @@ public class ExxetaInterviewEggs implements ISkycrapper {
                         break;
                     }
 
-                    x = 1;
+                    x = middle;
 
                 }
 
@@ -169,8 +169,9 @@ public class ExxetaInterviewEggs implements ISkycrapper {
                 vajce--;
                 if (vajce == 1) {
                     x = 1;
-                } else {
-                    res = x;
+                } 
+                if (vajce == 0) {
+                    res = x - 1; // previous floor
                     break;
                 }
             }
