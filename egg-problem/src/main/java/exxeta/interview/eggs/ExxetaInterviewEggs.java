@@ -4,7 +4,6 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- *
  * @author Michal_
  */
 public class ExxetaInterviewEggs implements ISkycrapper {
@@ -26,33 +25,13 @@ public class ExxetaInterviewEggs implements ISkycrapper {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-         //   ExxetaInterviewEggs t = new ExxetaInterviewEggs(50);
-         //    int res = t.fall_new();
-         //    System.out.println("Poschodie: "+ res);
-
-         test_1();
-
+        ExxetaInterviewEggs t = new ExxetaInterviewEggs(50);
+        int res = t.fall_new();
+        System.out.println("Poschodie: " + res);
     }
 
-    public static void test_1() {
-        int correct = 0, incorrect = 0;
-        for (int idx = 2; idx < 100; idx++) {
-            // set maximum floor
-            ExxetaInterviewEggs ex = new ExxetaInterviewEggs(idx);
-
-            if (idx == ex.fall_new()) {
-                correct++;
-            } else {
-                incorrect++;
-                System.out.print(idx + " ");
-            }
-
-        }
-        System.out.println("Result of test 1: \n correct: " + correct + "\n incorrect: " + incorrect);
-    }
 
     /**
-     *
      * @return maximum Floor of unbroken egg
      */
     public int fall() {
@@ -132,7 +111,6 @@ public class ExxetaInterviewEggs implements ISkycrapper {
     }
 
     /**
-     *
      * @return
      */
     public int fall_new() {
@@ -169,7 +147,7 @@ public class ExxetaInterviewEggs implements ISkycrapper {
                 vajce--;
                 if (vajce == 1) {
                     x = 1;
-                } 
+                }
                 if (vajce == 0) {
                     res = x - 1; // previous floor
                     break;
